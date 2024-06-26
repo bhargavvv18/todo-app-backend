@@ -11,10 +11,12 @@ const PORT = process.env.PORT || 8000;
 
 app.use(express.json());
 app.use(cors({
-    origin: 'https://todo-app-frontend-ochre.vercel.app/',
+    origin: 'https://todo-app-frontend-ochre.vercel.app', 
     methods: ['GET', 'POST', 'PATCH', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
-  }));
+    optionsSuccessStatus: 200 
+}));
+
 
 mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
