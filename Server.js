@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 8000;
 
 app.use(express.json());
 app.use(cors({
-    origin: 'https://mernstack-todo-app-frontend-d2x9.onrender.com',
+    origin: 'https://todo-app-frontend-ochre.vercel.app/',
     methods: ['GET', 'POST', 'PATCH', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
   }));
